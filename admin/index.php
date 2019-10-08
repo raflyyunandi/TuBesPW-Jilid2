@@ -16,24 +16,52 @@ session_start();
 <html>
 <head>
 	<title>Admin</title>
-	<link rel="stylesheet" type="text/css" href="../assets/css/css.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
 </head>
 <body>
-	<div>
-		<div class="navbar nav0 nav-brand"><a href="#" ">Zikri Alhaq</a></div>
-		<div class="navbar nav11 nav-click">
-	 	<form action="" method="POST">
-	 	<input type="text" name="keyword" id="keyword" placeholder="Search..." autofocus autocomplete="off">
-	 	</form>	
-		</div>
-		<div class="navbar nav3 nav-click"><a href="cetak.php" target="_blank">Cetak Halaman</a></div>
-		<div class="navbar nav2 nav-click"><a href="tambah.php">Tambah Data Penemu</a></div>
-		<div class="navbar nav1 nav-click"><a href="../php/logout.php"">Logout</a></div>
-	</div>
-	 <h1>PENEMU - PENEMU TERKENAL DI DUNIA</h1>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  	<a class="navbar-brand" href="#">Rafly Yunandi Aliansyah</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	     
+	      <li class="nav-item">
+	        	<a class="nav-link" href="#" target="_blank">Tentang Saya</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Cetak Kartu
+	        	</a>
+	    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#">Cetak Sekarang</a>
+	    </div>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">173040028</a>
+	      </li>
+
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0" action="" method="POST">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword" id="keyword">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="text" placeholder="Kolom Pencarian..."  autocomplete="off">Search</button>
+	     </form>
+    		  <div class="ml-2">
+    	  <a class="btn btn-outline-primary" a href="tambah.php">Tambah Data Baru</a>
+    	  <a class="btn btn-outline-danger" a href="../php/logout.php">Logout</a>
+    	  </div>
+  	</div>
+</nav>
+
+	
+	 <h1></h1>
 	 
-	 <div id="container">
-	 <table align="center">
+	 <div class="container">
+	 <table class="table">
+	 	 <thead class="thead-light">
 		<tr>
 			<th>No</th>
 			<th>Nama Penemu</th>
@@ -49,6 +77,7 @@ session_start();
 					<h1 align="center" style="color: black;">Data tidak ditemukan!</h1>
 				</td>
 			</tr>
+		</thead>
 		<?php else : ?>
 		<?php foreach ($penemu as $pen) : ?>
 
@@ -59,9 +88,9 @@ session_start();
 	 	<td><?= $pen['tahun_ditemukan'] ?></td>
 	 	<td><img src="../assets/image/<?= $pen['gambar_penemu'] ?>" width="150px" height="200px"></td>
 	 	<td>
-	 		<a href="ubah.php?nomor=<?= $pen['nomor'];?>">Ubah</a>
-	 		<a href="hapus.php?nomor=<?= $pen['nomor'] ?>" onclick="return confirm('Anda yakin ingin menghapus data ini ?')">Hapus</a>
-	 		<a href="../php/profil_admin.php?nomor=<?php echo $pen['nomor'] ?>">Detail</a>
+	 		<a class="btn btn-primary" href="ubah.php?nomor=<?= $pen['nomor'];?>">Ubah</a>
+	 		<a class="btn btn-danger" href="hapus.php?nomor=<?= $pen['nomor'] ?>" onclick="return confirm('Anda yakin ingin menghapus data ini ?')">Hapus</a>
+	 		<a class="btn btn-info"href="../php/profil_admin.php?nomor=<?php echo $pen['nomor'] ?>">Detail</a>
 	 	</td></tr>
 	 <?php endforeach ?>
 	<?php endif ?>

@@ -45,8 +45,8 @@
 
 	    </ul>
 	    <form class="form-inline my-2 my-lg-0" action="" method="POST">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="text" name="keyword" id="keyword" placeholder="Kolom Pencarian..."  autocomplete="off">Search</button>
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword" id="keyword">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="text"placeholder="Kolom Pencarian..."  autocomplete="off">Search</button>
 	     </form>
     		  <div class="ml-2">
     	  <a class="btn btn-outline-primary" a href="php/login.php">Login</a>
