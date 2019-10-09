@@ -29,14 +29,10 @@
 	        	<a class="nav-link" href="#" target="_blank">Tentang Saya</a>
 	      </li>
 	      <li class="nav-item dropdown">
-	        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Cetak Kartu
+	        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Cetak Kartu
 	        	</a>
 	    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	        <!--   <a class="dropdown-item" href="#">Action</a>
-	          <a class="dropdown-item" href="#">Another action</a>
-	          <div class="dropdown-divider"></div> -->
-	          <a class="dropdown-item" href="#">Cetak Sekarang</a>
+	          <a class="dropdown-item" href="admin/cetak.php">Cetak Sekarang</a>
 	    </div>
 	      </li>
 	      <li class="nav-item">
@@ -45,8 +41,8 @@
 
 	    </ul>
 	    <form class="form-inline my-2 my-lg-0" action="" method="POST">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword" id="keyword">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="text"placeholder="Kolom Pencarian..."  autocomplete="off">Search</button>
+	      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="keyword" id="keyword" autofocus>
+	      <button class="btn btn-outline-success my-2 my-sm-0" >Search</button>
 	     </form>
     		  <div class="ml-2">
     	  <a class="btn btn-outline-primary" a href="php/login.php">Login</a>

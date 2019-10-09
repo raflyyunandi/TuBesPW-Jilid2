@@ -41,14 +41,13 @@
   	</div>
 </nav>
 
-<body>
   <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Tambah Data Penemu</h5>
-            <form class="form-signin" method="POST" action="">
+            <form class="form-signin" method="POST" action="" enctype="multipart/form-data">
               <div class="form-label-group">
                 <input type="text" name="nomor" id="nomor" class="form-control" placeholder="Nomor" required autofocus>
                 <label for="nomor">Nomor</label>
@@ -61,10 +60,7 @@
                 <input type="text" name="temuan" id="temuan" class="form-control" placeholder="Temuan" required>
                 <label for="inputPassword">Temuan</label>
               </div>
-               <div class="form-label-group">
-                <input type="password" name="tahun_ditemukan" id="tahun_ditemukan" class="form-control" placeholder="tahun ditemukan" required>
-                <label for="tahun_ditemukan">Tahun Ditemukan</label>
-              </div>
+           
           	 <div class="form-label-group">
           	 		<select  class="form-control" name="id_negara" id="id_negara">
           	 			<?php foreach ($negara as $n) { ?>
@@ -75,11 +71,15 @@
               </div>
 
               <div class="form-label-group">
-                <input  type="file" name="gambar_penemu" id="gambar_penemu">
+                <input type="text" name="tahun_ditemukan" id="tahun_ditemukan" class="form-control" placeholder="tahun ditemukan" required>
+                <label for="tahun_ditemukan">Tahun Ditemukan</label>
+              </div>
+
+              <div class="form-label-group" >
+                <input type="file"name="gambar_penemu" id="gambar_penemu">
                 <label for="gambar_penemu">Gambar Penemu</label>
               </div>
 
-       
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="tambah" >OK</button>
               	
             </form>

@@ -37,7 +37,7 @@ session_start();
 	          Cetak Kartu
 	        	</a>
 	    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="#">Cetak Sekarang</a>
+	          <a class="dropdown-item" href="cetak.php">Cetak Sekarang</a>
 	    </div>
 	      </li>
 	      <li class="nav-item">
@@ -46,8 +46,8 @@ session_start();
 
 	    </ul>
 	    <form class="form-inline my-2 my-lg-0" action="" method="POST">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword" id="keyword">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="text" placeholder="Kolom Pencarian..."  autocomplete="off">Search</button>
+	      <input class="form-control mr-sm-2" type="text" placeholder="Search"  name="keyword" id="keyword">
+	      <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
 	     </form>
     		  <div class="ml-2">
     	  <a class="btn btn-outline-primary" a href="tambah.php">Tambah Data Baru</a>
@@ -97,6 +97,10 @@ session_start();
 	 </table>
 	 </div>
 <script src="../assets/js/scriptAdmin.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>

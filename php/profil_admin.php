@@ -15,25 +15,39 @@
  <html>
  <head>
  	<title>Admin</title>
-	<link rel="stylesheet" type="text/css" href="../assets/css/css.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
 
  </head>
  <body>
- 	<div>
-		<div class="navbar nav0 nav-brand"><a href="#" ">M Zikri Alhaq</a></div>
-		<div class="navbar navx nav-click"></div>
-		<div class="navbar nav1 nav-click"><a href="../index.php"">Logout</a></div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  	<a class="navbar-brand" href="#">Rafly Yunandi Aliansyah</a>
+	    <ul class="navbar-nav mr-auto">
+	       <li class="nav-item">
+	        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">173040028</a>
+	      </li>
+
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0" action="" method="POST">
+	      <a class="btn btn-outline-danger my-2 my-sm-0" href="../admin/index.php" >Kembali</a>
+	     </form>
+    		
+  	</div>
+</nav>
+
+<div class="container ">
+	<div class="card card-signin my-5">
+	 	<div class="card-header"> Profil Penemu </div>
+  			<div class="card-body"  align="center">
+			    <h2 class="card-title"><?= $pen['penemu'] ?></h2>
+			    	<p class="card-text">
+			    	<img src="../assets/image/<?= $pen['gambar_penemu'] ?>" width="150px" height="200px"><hr>
+				      <p class="btn btn-secondary"><?= $pen['temuan'] ?></p>
+				      <p class="btn btn-danger"><?= $pen['nama_negara'] ?></p>
+				      <p class="btn btn-info"><?= $pen['tahun_ditemukan'] ?></p>
+  					</p>
+		</div>
 	</div>
- 	<h1>Profil Penemu</h1>
- 	<table align="center">
-	 	<tr><td><img src="../assets/image/<?= $pen['gambar_penemu'] ?>"></td></tr>
-	 	<tr><td>Urutan : <?= $pen['nomor'] ?></td></tr>
-	 	<tr><td>Nama Penemu : <?= $pen['penemu'] ?></td></tr>
-	 	<tr><td>Temuan : <?= $pen['temuan'] ?></td></tr>
-	 	<tr><td>Asal Negara : <?= $pen['nama_negara'] ?></td></tr>
-	 	<tr><td>Tahun Ditemukan : <?= $pen['tahun_ditemukan'] ?></td></tr>
-	 	
-	 </table>
- 	<div class="kembali" align="center"><a href="../admin/index.php">Kembali</a></div>
+</div>
+
  </body>
  </html>
