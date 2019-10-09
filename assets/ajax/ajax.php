@@ -11,33 +11,25 @@
 	$penemu = query($query);
 
  ?>
-	 <div id="container">
-		<?php foreach ($penemu as $pen) : ?>
-	 <table align="center">
-		<tr>
-			<th colspan="7">Profil Penemu</th>
-		</tr>
+ 
+ 		
+<div class="container" id="container">
+	<div class="card">
 		<?php if(empty($penemu)) :?>
-			<tr>
-				<td colspan="7">
-					<h1 align="center" style="color: black;">Data tidak ditemukan!</h1>
-				</td>
-			</tr>
+			<h1 align="center" style="color: black;">Data tidak ditemukan!</h1>
 		<?php else : ?>
-		<tr><td colspan="7"><img src="assets/image/<?= $pen['gambar_penemu'] ?>" width="150px" height="200px"></td></tr>
-	 	<tr>
-	 		<td width="200px">Nama Penemu</td>
-	 		<td colspan="5"><?= $pen['penemu'] ?></td></tr>
-	 	<tr>
-	 		<td width="200px">Temuan</td>
-	 		<td colspan="5"><?= $pen['temuan'] ?></td></tr>
-	 	<tr>
-	 		<td width="200px">Asal Negara</td>
-	 		<td colspan="5"><?= $pen['nama_negara'] ?></td></tr>
-	 	<tr>
-	 		<td width="200px">Tahun Ditemukan</td>
-	 		<td colspan="5"><?= $pen['tahun_ditemukan'] ?></td></tr>
-		<?php endif ?>
-	 	</table>
-	 	<?php endforeach ?>
+		<?php foreach ($penemu as $pen) : ?>	
+  		<div class="card-header"> Profil Penemu </div>
+  			<div class="card-body"  align="center">
+			    <h2 class="card-title"><?= $pen['penemu'] ?></h2>
+			    	<p class="card-text">
+			    	<img src="assets/image/<?= $pen['gambar_penemu'] ?>" width="150px" height="200px"><hr>
+				      <p class="btn btn-secondary"><?= $pen['temuan'] ?></p>
+				      <p class="btn btn-danger"><?= $pen['nama_negara'] ?></p>
+				      <p class="btn btn-info"><?= $pen['tahun_ditemukan'] ?></p>
+  					</p>
+		</div>
+  		<?php endforeach ?>
+		<?php endif; ?>
+	</div>
 </div>

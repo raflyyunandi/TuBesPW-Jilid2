@@ -56,11 +56,8 @@ session_start();
   	</div>
 </nav>
 
-	
-	 <h1></h1>
-	 
-	 <div class="container">
-	 <table class="table">
+	 <div class="container" id="container">
+	 	<table class="table">
 	 	 <thead class="thead-light">
 		<tr>
 			<th>No</th>

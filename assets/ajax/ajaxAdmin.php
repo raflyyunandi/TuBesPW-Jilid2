@@ -10,8 +10,9 @@
 			tahun_ditemukan LIKE '%$keyword%'";
 	$penemu = query($query);
 
- ?>
-	 <table align="center">
+ ?><div class="container">
+	 	<table class="table">
+	 	 <thead class="thead-light">
 		<tr>
 			<th>No</th>
 			<th>Nama Penemu</th>
@@ -27,6 +28,7 @@
 					<h1 align="center" style="color: black;">Data tidak ditemukan!</h1>
 				</td>
 			</tr>
+		</thead>
 		<?php else : ?>
 		<?php foreach ($penemu as $pen) : ?>
 
@@ -37,10 +39,11 @@
 	 	<td><?= $pen['tahun_ditemukan'] ?></td>
 	 	<td><img src="../assets/image/<?= $pen['gambar_penemu'] ?>" width="150px" height="200px"></td>
 	 	<td>
-	 		<a href="ubah.php?nomor=<?= $pen['nomor'];?>">Ubah</a>
-	 		<a href="hapus.php?nomor=<?= $pen['nomor'] ?>" onclick="return confirm('Anda yakin ingin menghapus data ini ?')">Hapus</a>
-	 		<a href="../php/profil_admin.php?nomor=<?php echo $pen['nomor'] ?>">Detail</a>
+	 		<a class="btn btn-primary" href="ubah.php?nomor=<?= $pen['nomor'];?>">Ubah</a>
+	 		<a class="btn btn-danger" href="hapus.php?nomor=<?= $pen['nomor'] ?>" onclick="return confirm('Anda yakin ingin menghapus data ini ?')">Hapus</a>
+	 		<a class="btn btn-info"href="../php/profil_admin.php?nomor=<?php echo $pen['nomor'] ?>">Detail</a>
 	 	</td></tr>
 	 <?php endforeach ?>
 	<?php endif ?>
 	 </table>
+	 </div>
